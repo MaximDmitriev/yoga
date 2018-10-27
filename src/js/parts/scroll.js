@@ -9,71 +9,27 @@ export default function scroll() {
 
     infoBtn[0].addEventListener('click', () => {
         
-        let coordY = aboutScreen.offsetTop - 80;
-                        
-        let scroller = setInterval( () => {
-            let scrollBy = coordY / 60;
-            
-            if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-                
-                window.scrollBy(0, scrollBy);
-            } else {
-                window.scrollTo(0, coordY);
-                clearInterval(scroller);
-            }
-        }, 17);
+        aboutScreen.scrollIntoView({behavior: "smooth"});
+
     });
 
     infoBtn[1].addEventListener('click', () => {
         
-        let coordY = photoScreen.offsetTop - 80;
-                        
-        let scroller = setInterval( () => {
-            let scrollBy = coordY / 60;
-            
-            if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-                
-                window.scrollBy(0, scrollBy);
-            } else {
-                window.scrollTo(0, coordY);
-                clearInterval(scroller);
-            }
-        }, 17);
+        photoScreen.scrollIntoView({behavior: "smooth"});
+
     });
         
         
         
     infoBtn[2].addEventListener('click', () => {
         
-        let coordY = priceScreen.offsetTop - 80;
-                        
-        let scroller = setInterval( () => {
-            let scrollBy = coordY / 60;
-            
-            if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-                
-                window.scrollBy(0, scrollBy);
-            } else {
-                window.scrollTo(0, coordY);
-                clearInterval(scroller);
-            }
-        }, 17);
+        priceScreen.scrollIntoView({behavior: "smooth"});
+
     });
 
     infoBtn[3].addEventListener('click', () => {
         
-        let coordY = contactsScreen.offsetTop - 80;
-                        
-        let scroller = setInterval( () => {
-            let scrollBy = coordY / 60;
-            
-            if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-                
-                window.scrollBy(0, scrollBy);
-            } else {
-                window.scrollTo(0, coordY);
-                clearInterval(scroller);
-            }
-        }, 17);
+        contactsScreen.scrollIntoView({behavior: "smooth"});
+
     });
 }

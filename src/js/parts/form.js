@@ -23,6 +23,7 @@ export default function form() {
             for (let i=0; i < input.length; i++) {
                 input[i].value = '';
             }
+            question.removeChild(statusInfo);
         }
 
         function checkStatus(data) {
@@ -55,7 +56,7 @@ export default function form() {
                 .then(() => statusInfo.innerHTML = message.loading)
                 .then(() => statusInfo.innerHTML = message.success)
                 .catch(() => statusInfo.innerHTML = message.failure)
-                .then(() => clearInput())
+                .then(() => setTimeout(clearInput, 2000))
         }
     }
 
